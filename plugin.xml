@@ -35,7 +35,7 @@
         </intent-filter>
       </service>
       <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="fcm_default_channel" />
-      <!--<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_stat" />-->
+      <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_stat" />
     </config-file>
     
     <framework src="com.google.firebase:firebase-core:16.0.1" />
@@ -44,9 +44,16 @@
     <framework src="com.android.support:support-v4:26.1.0" />
     <framework src="com.android.support:support-v13:26.1.0" />
     <framework src="com.android.support:support-compat:26.1.0" />
+    <framework src="me.leolin:ShortcutBadger:1.1.17@aar"/>
 
+    <source-file src="src/android/com/adobe/phonegap/push/BackgroundActionButtonHandler.java" target-dir="src/com/adobe/phonegap/push/"/>
     <source-file src="src/android/com/adobe/phonegap/push/FCMIntentService.java" target-dir="src/com/adobe/phonegap/push/" />
+    <source-file src="src/android/com/adobe/phonegap/push/PushConstants.java" target-dir="src/com/adobe/phonegap/push/"/>
+    <source-file src="src/android/com/adobe/phonegap/push/PushHandlerActivity.java" target-dir="src/com/adobe/phonegap/push/"/>
+    <source-file src="src/android/com/adobe/phonegap/push/PushDismissedHandler.java" target-dir="src/com/adobe/phonegap/push/"/>
     <source-file src="src/android/com/adobe/phonegap/push/PushPlugin.java" target-dir="src/com/adobe/phonegap/push/"/>
+    <source-file src="src/android/com/adobe/phonegap/push/PermissionUtils.java" target-dir="src/com/adobe/phonegap/push/"/>
+
   </platform>
   <platform name="browser">
     <js-module src="www/browser/push.js" name="BrowserPush">
