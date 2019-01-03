@@ -1,4 +1,4 @@
-/*import java.util.regex.Pattern
+import java.util.regex.Pattern
 
 def doExtractStringFromManifest(name) {
     def manifestFile = file(android.sourceSets.main.manifest.srcFile)
@@ -19,4 +19,3 @@ android {
         applicationId = doExtractStringFromManifest("package")
     }
 }
-*/
